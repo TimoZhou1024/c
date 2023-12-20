@@ -1,0 +1,1 @@
+print((input()=='O')^(input().count('1')&1))

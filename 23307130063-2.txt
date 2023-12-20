@@ -1,0 +1,17 @@
+00102.c
+    When:   2023-9-8 13:58:39
+    ID:     44d63718a44a
+    Author: timo
+    Problem:00102
+
+00103.c
+    When:   2023-9-8 14:09:07
+    ID:     78b9dc260146
+    Author: timo
+    Problem:00103
+
+00106.c
+    When:   2023-9-8 14:13:52
+    ID:     655fa93bbc1f
+    Author: timo
+    Problem:00106
