@@ -1,0 +1,227 @@
+(window["canvasWebpackJsonp"]=window["canvasWebpackJsonp"]||[]).push([[102,3658],{"65NJ":function(t,e,n){"use strict"
+var i=n("ouhR")
+var s=n.n(i)
+n("w2hD")
+s.a.fn.scrollToVisible=function(t){const e={}
+const n=s()(t)
+if(0===n.length)return
+let i=n.offset(),a=n.outerWidth(),r=n.outerHeight(),o=i.top,l=o+r,u=i.left,c=u+a,d="html,body"==this.selector?s.a.windowScrollTop():this.scrollTop(),f=this.scrollLeft(),h=this.outerHeight(),_=this.outerWidth()
+if("html,body"!=this.selector){let t=s()("body").offset()
+this.each((function(){try{t=s()(this).offset()
+return false}catch(t){}}))
+o-=t.top
+l-=t.top
+u-=t.left
+c-=t.left}if("HTML"==this[0].tagName||"BODY"==this[0].tagName){h=s()(window).height()
+s()("#wizard_box:visible").length>0&&(h-=s()("#wizard_box:visible").height())
+_=s()(window).width()
+o-=d
+u-=f
+l-=d
+c-=f}o<0||h<r&&l>h?e.scrollTop=o+d:l>h&&(e.scrollTop=l+d-h+20)
+u<0?e.scrollLeft=u+f:c>_&&(e.scrollLeft=c+f-_+20)
+1==e.scrollTop&&(e.scrollTop=0)
+1==e.scrollLeft&&(e.scrollLeft=0)
+this.scrollTop(e.scrollTop)
+this.scrollLeft(e.scrollLeft)
+return this}},B77g:function(t,e,n){"use strict"
+var i=n("mX+G")
+var s=function(t,e){for(var n in e)a.call(e,n)&&(t[n]=e[n])
+function i(){this.constructor=t}i.prototype=e.prototype
+t.prototype=new i
+t.__super__=e.prototype
+return t},a={}.hasOwnProperty
+e["a"]=function(t){s(e,t)
+function e(){return e.__super__.constructor.apply(this,arguments)}e.prototype.tagName="input"
+e.prototype.defaults={modelAttribute:"unnamed"}
+e.prototype.initialize=function(){e.__super__.initialize.apply(this,arguments)
+return this.setupElement()}
+e.prototype.setElement=function(){e.__super__.setElement.apply(this,arguments)
+return this.setupElement()}
+e.prototype.setupElement=function(){var t,e
+this.lastValue=null!=(t=this.el)?t.value:void 0
+return this.modelAttribute=this.$el.attr("name")||(null!=(e=this.options)?e.modelAttribute:void 0)}
+e.prototype.attach=function(){if(!this.collection)return
+this.collection.on("beforeFetch",(t=this,function(){return t.$el.addClass("loading")}))
+var t
+this.collection.on("fetch",function(t){return function(){return t.$el.removeClass("loading")}}(this))
+return this.collection.on("fetch:fail",function(t){return function(){return t.$el.removeClass("loading")}}(this))}
+e.prototype.updateModel=function(){var t
+t=this.el.value
+if(t&&t.length<this.options.minLength&&!(this.options.allowSmallerNumbers&&t>0)){if(!this.options.setParamOnInvalid)return
+t=false}return this.setParam(t)}
+e.prototype.setParam=function(t){var e,n,i
+null!=(e=this.model)&&e.set(this.modelAttribute,t)
+return""===t?null!=(n=this.collection)?n.deleteParam(this.modelAttribute):void 0:null!=(i=this.collection)?i.setParam(this.modelAttribute,t):void 0}
+return e}(i["View"])},aq8L:function(t,e,n){"use strict"
+var i=n("HGxv")
+var s=n("8WeW")
+Object(s["a"])(JSON.parse('{"ar":{"buttons":{"cancel":"إلغاء","delete":"حذف"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"هل ترغب بالتأكيد في حذف هذا؟"}}},"ca":{"buttons":{"cancel":"Cancel·la","delete":"Suprimeix"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Segur que ho voleu suprimir?"}}},"cy":{"buttons":{"cancel":"Canslo","delete":"Dileu"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Ydych chi’n siŵr eich bod am ddileu hyn?"}}},"da":{"buttons":{"cancel":"Annullér","delete":"Slet"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Er du sikker på, at du vil slette dette?"}}},"da-x-k12":{"buttons":{"cancel":"Annullér","delete":"Slet"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Er du sikker på, at du vil slette dette?"}}},"de":{"buttons":{"cancel":"Abbrechen","delete":"Löschen"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Möchten Sie dies wirklich löschen?"}}},"el":{"buttons":{"cancel":"Ακύρωση","delete":"Διαγραφή"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Είστε σίγουρος/η ότι επιθυμείτε να το διαγράψετε;"}}},"en-AU":{"buttons":{"cancel":"Cancel","delete":"Delete"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Are you sure you want to delete this?"}}},"en-CA":{"buttons":{"cancel":"Cancel","delete":"Delete"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Are you sure you want to delete this?"}}},"en-GB":{"buttons":{"cancel":"Cancel","delete":"Delete"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Are you sure you want to delete this?"}}},"es":{"buttons":{"cancel":"Cancelar","delete":"Eliminar"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"¿Seguro que desea eliminarlo?"}}},"es-ES":{"buttons":{"cancel":"Cancelar","delete":"Eliminar"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"¿Está seguro que desea eliminarlo?"}}},"fa":{"buttons":{"cancel":"لغو","delete":"حذف"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"مطمئنید که می خواهید این مورد حذف شود؟"}}},"fi":{"buttons":{"cancel":"Peruuta","delete":"Poista"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Haluatko varmasti poistaa tämän?"}}},"fr":{"buttons":{"cancel":"Annuler","delete":"Supprimer"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Voulez-vous vraiment supprimer cet élément ?"}}},"fr-CA":{"buttons":{"cancel":"Annuler","delete":"Supprimer"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Voulez-vous vraiment supprimer cet élément?"}}},"he":{"buttons":{"cancel":"ביטול","delete":"ביטול"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"בטוח/ה שרוצה לבטל זאת?"}}},"ht":{"buttons":{"cancel":"Anile","delete":"Efase"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Ou kwè vrèman ou vle efase sa a?"}}},"hu":{"buttons":{"cancel":"Mégse","delete":"Törlés"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Biztos benne, hogy törli ezt?"}}},"hy":{"buttons":{"cancel":"Չեղյալ համարել","delete":"Ջնջել"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Դուք իսկապե՞ս ցանկանում եք ջնջել սա:"}}},"is":{"buttons":{"cancel":"Hætta við","delete":"Eyða"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Viltu örugglega eyða þessu?"}}},"it":{"buttons":{"cancel":"Annulla","delete":"Elimina"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Vuoi eliminare questo?"}}},"ja":{"buttons":{"cancel":"キャンセル","delete":"削除"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"これを削除してもよろしいですか?"}}},"ko":{"buttons":{"cancel":"취소","delete":"삭제"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"삭제하시겠습니까?"}}},"mi":{"buttons":{"cancel":"Whakakore","delete":"Muku"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"E tino hiahia ana koe ki te muku i tēnei?"}}},"nb":{"buttons":{"cancel":"Avbryt","delete":"Slett"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Er du sikker på at du ønsker å slette dette?"}}},"nb-x-k12":{"buttons":{"cancel":"Avbryt","delete":"Slett"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Er du sikker på at du ønsker å slette dette?"}}},"nl":{"buttons":{"cancel":"Annuleren","delete":"Verwijderen"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Weet je zeker dat je dit wilt verwijderen?"}}},"nn":{"buttons":{"cancel":"Avbryt","delete":"Slett"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Er du sikker på at du vil slette dette?"}}},"pl":{"buttons":{"cancel":"Anuluj","delete":"Usuń"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Czy na pewno chcesz usunąć ten element?"}}},"pt":{"buttons":{"cancel":"Cancelar","delete":"Eliminar"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Tem certeza de que deseja excluir isto?"}}},"pt-BR":{"buttons":{"cancel":"Cancelar","delete":"Excluir"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Tem certeza que deseja excluir isto?"}}},"ru":{"buttons":{"cancel":"Отменить","delete":"Удалить"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Действительно хотите удалить?"}}},"sl":{"buttons":{"cancel":"Prekliči","delete":"Odstrani"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Ali ste prepričani, da želite to izbrisati?"}}},"sv":{"buttons":{"cancel":"Avbryt","delete":"Ta bort"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Vill du verkligen radera det här?"}}},"sv-x-k12":{"buttons":{"cancel":"Avbryt","delete":"Ta bort"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Vill du verkligen radera det här?"}}},"th":{"buttons":{"cancel":"ยกเลิก","delete":"ลบ"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"แน่ใจว่าต้องการลบหรือไม่"}}},"tr":{"buttons":{"cancel":"İptal","delete":"Sil"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Bunu silmek istediğinize emin misiniz?"}}},"uk":{"buttons":{"cancel":"Скасувати","delete":"Видалити"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Ви впевнені, що хочете це видалити?"}}},"vi":{"buttons":{"cancel":"Hủy","delete":"Xóa"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"Bạn có chắc chắn muốn xóa không?"}}},"zh-Hans":{"buttons":{"cancel":"取消","delete":"删除"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"是否确定要删除它?"}}},"zh-Hant":{"buttons":{"cancel":"取消","delete":"刪除"},"instructure_misc_plugins":{"confirms":{"default_delete_thing":"您是否確定要刪除？"}}}}'))
+n("jQeR")
+n("0sPK")
+var a=i["default"].scoped("instructure_misc_plugins")
+var r=n("ouhR")
+var o=n.n(r)
+var l=n("gI0r")
+var u=n("3PZ/")
+n("dhbk")
+n("ESjL")
+n("65NJ")
+n("w2hD")
+o.a.fn.setOptions=function(t,e){let n=t?"<option value=''>"+Object(l["a"])(t)+"</option>":""
+null==e&&(e=[])
+e.forEach(t=>{const e=Object(l["a"])(t)
+n+='<option value="'+e+'">'+e+"</option>"})
+return this.html(o.a.raw(n))}
+o.a.fn.ifExists=function(t){this.length&&t.call(this,this)
+return this}
+o.a.fn.scrollbarWidth=function(){const t=o()('<div style="width:50px;height:50px;overflow:hidden;position:absolute;top:-200px;left:-200px;"><div style="height:100px;"></div>').appendTo(this),e=t.find("div")
+const n=e.innerWidth()
+t.css("overflow-y","scroll")
+const i=e.innerWidth()
+t.remove()
+return n-i}
+o.a.fn.dim=function(t){return this.animate({opacity:.4},t)}
+o.a.fn.undim=function(t){return this.animate({opacity:1},t)}
+o.a.fn.confirmDelete=function(t){t=o.a.extend({},o.a.fn.confirmDelete.defaults,t)
+const e=this
+let n=null
+let i=true
+t.noMessage=t.noMessage||t.no_message
+const s=function(){if(!i){t.cancelled&&o.a.isFunction(t.cancelled)&&t.cancelled.call(e)
+return}t.confirmed||(t.confirmed=function(){e.dim()})
+t.confirmed.call(e)
+if(t.url){t.success||(t.success=function(t){e.fadeOut("slow",()=>{e.remove()})})
+const i=t.prepareData?t.prepareData.call(e,n):{}
+i.authenticity_token=Object(u["a"])()
+o.a.ajaxJSON(t.url,"DELETE",i,n=>{t.success.call(e,n)},(n,i,s,a)=>{t.error&&o.a.isFunction(t.error)?t.error.call(e,n,i,s,a):o.a.ajaxJSON.unhandledXHRs.push(i)})}else{t.success||(t.success=function(){e.fadeOut("slow",()=>{e.remove()})})
+t.success.call(e)}}
+if(t.message&&!t.noMessage&&!o.a.skipConfirmations){if(t.dialog){i=false
+const e="object"===typeof t.dialog?t.dialog:{}
+const r=t.url.includes("assignments")?"btn-danger":"btn-primary"
+n=o()(t.message).dialog(o.a.extend({},{modal:true,close:s,buttons:[{text:a.t("#buttons.cancel","Cancel"),click(){o()(this).dialog("close")}},{text:a.t("#buttons.delete","Delete"),class:r,click(){i=true
+o()(this).dialog("close")}}]},e))
+return}i=confirm(t.message)}s()}
+o.a.fn.confirmDelete.defaults={get message(){return a.t("confirms.default_delete_thing","Are you sure you want to delete this?")}}
+o.a.fn.fragmentChange=function(t){if(t&&true!==t){const n=(window.location.search||"").replace(/^\?/,"").split("&")
+let i=null
+for(var e=0;e<n.length;e++){const t=n[e]
+t&&0===t.indexOf("hash=")&&(i="#"+t.substring(5))}this.bind("document_fragment_change",t)
+const s=this
+let a=false
+for(e=0;e<o.a._checkFragments.fragmentList.length;e++){const t=o.a._checkFragments.fragmentList[e]
+t.doc[0]==s[0]&&(a=true)}a||o.a._checkFragments.fragmentList.push({doc:s,fragment:""})
+o()(window).bind("hashchange",o.a._checkFragments)
+setTimeout(()=>{i&&i.length>0?s.triggerHandler("document_fragment_change",i):s&&s[0]&&s[0].location&&s[0].location.hash.length>0&&s.triggerHandler("document_fragment_change",s[0].location.hash)},500)}else this.triggerHandler("document_fragment_change",this[0].location.hash)
+return this}
+o.a._checkFragments=function(){const t=o.a._checkFragments.fragmentList
+for(let e=0;e<t.length;e++){const n=t[e]
+const i=n.doc
+if(i[0].location.hash!=n.fragment){i.triggerHandler("document_fragment_change",i[0].location.hash)
+n.fragment=i[0].location.hash
+o.a._checkFragments.fragmentList[e]=n}}}
+o.a._checkFragments.fragmentList=[]
+o.a.fn.clickLink=function(){const t=this.eq(0)
+t.hasClass("disabled_link")||t.click()}
+o.a.fn.showIf=function(t){if(o.a.isFunction(t))return this.each((function(e){o()(this).showIf(t.call(this))}))
+t?this.show():this.hide()
+return this}
+o.a.fn.disableIf=function(t){o.a.isFunction(t)&&(t=t.call(this))
+this.prop("disabled",!!t)
+return this}
+o.a.fn.indicate=function(t){t=t||{}
+let e
+if("remove"==t){e=this.data("indicator")
+e&&e.remove()
+return}o()(".indicator_box").remove()
+let n=this.offset()
+t&&t.offset&&(n=t.offset)
+const i=this.width()
+const s=this.height()
+const a=(t.container||this).zIndex()
+e=o()(document.createElement("div"))
+e.css({width:i+6,height:s+6,top:n.top-3,left:n.left-3,zIndex:a+1,position:"absolute",display:"block","-moz-border-radius":5,opacity:.8,border:"2px solid #870",backgroundColor:"#fd0"})
+e.addClass("indicator_box")
+e.mouseover((function(){o()(this).stop().fadeOut("fast",(function(){o()(this).remove()}))}))
+this.data("indicator")&&this.indicate("remove")
+this.data("indicator",e)
+o()("body").append(e)
+t&&t.singleFlash?e.hide().fadeIn().animate({opacity:.8},500).fadeOut("slow",(function(){o()(this).remove()})):e.hide().fadeIn().animate({opacity:.8},500).fadeOut("slow").fadeIn("slow").animate({opacity:.8},2500).fadeOut("slow",(function(){o()(this).remove()}))
+t&&t.scroll&&o()("html,body").scrollToVisible(e)}
+o.a.fn.hasScrollbar=function(){return this.length&&this[0].clientHeight<this[0].scrollHeight}
+o.a.fn.log=function(t){console.log("%s: %o",t,this)
+return this}
+o.a.fn.fillWindowWithMe=function(t){const e=o.a.extend({minHeight:400},t),n=o()(this),i=o()("#wrapper"),s=o()("#main"),a=o()("#not_right_side"),r=o()(window),l=o()(this).add(e.alsoResize)
+function u(){l.height(0)
+const t=r.height()-(i.offset().top+i.outerHeight())+(s.height()-a.height()),u=Math.max(400,t)
+l.height(u)
+o.a.isFunction(e.onResize)&&e.onResize.call(n,u)}u()
+r.unbind("resize.fillWindowWithMe").bind("resize.fillWindowWithMe",u)
+return this}
+o.a.fn.autoGrowInput=function(t){t=o.a.extend({maxWidth:1e3,minWidth:0,comfortZone:70},t)
+this.filter("input:text").each((function(){let e=t.minWidth||o()(this).width(),n="",i=o()(this),s=o()("<tester/>").css({position:"absolute",top:-9999,left:-9999,width:"auto",fontSize:i.css("fontSize"),fontFamily:i.css("fontFamily"),fontWeight:i.css("fontWeight"),letterSpacing:i.css("letterSpacing"),whiteSpace:"nowrap"}),a=function(){setTimeout(()=>{if(n===(n=i.val()))return
+s.text(n)
+const a=s.width(),r=a+t.comfortZone>=e?a+t.comfortZone:e,o=i.width(),l=r<o&&r>=e||r>e&&r<t.maxWidth
+l&&i.width(r)})}
+s.insertAfter(i)
+o()(this).bind("keyup keydown blur update change",a)}))
+return this}
+o.a},msTH:function(t,e,n){"use strict"
+var i=n("ouhR")
+var s=n.n(i)
+var a=n("Y/W1")
+var r=n.n(a)
+var o=n("gI0r")
+var l=n("HGxv")
+var u=n("8WeW")
+Object(u["a"])(JSON.parse('{"ar":{"user_content_aaf0fb5a":"محتوى المستخدم"},"ca":{"user_content_aaf0fb5a":"Contingut de l\'usuari"},"cy":{"user_content_aaf0fb5a":"Cynnwys Defnyddiwr"},"da":{"user_content_aaf0fb5a":"Brugerindhold"},"da-x-k12":{"user_content_aaf0fb5a":"Brugerindhold"},"de":{"user_content_aaf0fb5a":"Benutzer-Content"},"el":{"user_content_aaf0fb5a":"Περιεχόμενο Χρήστη"},"en-AU":{"user_content_aaf0fb5a":"User Content"},"en-CA":{"user_content_aaf0fb5a":"User Content"},"en-GB":{"user_content_aaf0fb5a":"User content"},"es":{"user_content_aaf0fb5a":"Contenido del usuario"},"es-ES":{"user_content_aaf0fb5a":"Contenido del usuario"},"fa":{"user_content_aaf0fb5a":"محتوای کاربر"},"fi":{"user_content_aaf0fb5a":"Käyttäjän sisältö"},"fr":{"user_content_aaf0fb5a":"Contenu de l\'utilisateur"},"fr-CA":{"user_content_aaf0fb5a":"Contenu de l\'utilisateur"},"he":{"user_content_aaf0fb5a":"תוכן משתמש"},"ht":{"user_content_aaf0fb5a":"Kontni Itilizatè"},"hu":{"user_content_aaf0fb5a":"Felhasználói tartalom"},"is":{"user_content_aaf0fb5a":"Notandaefni"},"it":{"user_content_aaf0fb5a":"Contenuto utente"},"ja":{"user_content_aaf0fb5a":"ユーザーコンテンツ"},"mi":{"user_content_aaf0fb5a":"Ihirangi kaiwhakamahi"},"nb":{"user_content_aaf0fb5a":"Brukerinnhold"},"nb-x-k12":{"user_content_aaf0fb5a":"Brukerinnhold"},"nl":{"user_content_aaf0fb5a":"Gebruikersinhoud"},"nn":{"user_content_aaf0fb5a":"Brukarinnhald"},"pl":{"user_content_aaf0fb5a":"Zawartość użytkownika"},"pt":{"user_content_aaf0fb5a":"Conteúdo do Utilizador"},"pt-BR":{"user_content_aaf0fb5a":"Conteúdo do Usuário"},"ru":{"user_content_aaf0fb5a":"Контент пользователя"},"sl":{"user_content_aaf0fb5a":"Vsebina uporabnika"},"sv":{"user_content_aaf0fb5a":"Användarinnehåll"},"sv-x-k12":{"user_content_aaf0fb5a":"Användarinnehåll"},"th":{"user_content_aaf0fb5a":"เนื้อหาของผู้ใช้"},"tr":{"user_content_aaf0fb5a":"Kullanıcı İçeriği"},"uk":{"user_content_aaf0fb5a":"Контент користувача"},"vi":{"user_content_aaf0fb5a":"Nội Dung Người Dùng"},"zh-Hans":{"user_content_aaf0fb5a":"用户内容"},"zh-Hant":{"user_content_aaf0fb5a":"使用者內容"}}'))
+n("jQeR")
+n("0sPK")
+var c=l["default"].scoped("user_content")
+const d={translateMathmlForScreenreaders(t){var e,n
+if(!(null!==(e=ENV)&&void 0!==e&&null!==(n=e.FEATURES)&&void 0!==n&&n.new_math_equation_handling)){const e=s()("<div/>").html(t.attr("x-canvaslms-safe-mathml")).html()
+const n=s()('<span class="hidden-readable"></span>')
+n.html(e)
+return n}},toMediaCommentLink(t){const e=s()(`<a\n        id='media_comment_${Object(o["a"])(s()(t).data("media_comment_id"))}'\n        data-media_comment_type='${Object(o["a"])(s()(t).data("media_comment_type"))}'\n        class='instructure_inline_media_comment ${Object(o["a"])(t.nodeName.toLowerCase())}_comment'\n        data-alt='${Object(o["a"])(s()(t).attr("data-alt"))}'\n      />`)
+e.html(s()(t).html())
+return e},convert(t,e={}){const n=s()("<div />").html(t)
+n.find("video.instructure_inline_media_comment,audio.instructure_inline_media_comment").replaceWith((function(){return d.toMediaCommentLink(this)}))
+n.find("object.instructure_user_content:not(#kaltura_player) embed").remove()
+if(!e.forEditing){n.find("object.instructure_user_content,embed.instructure_user_content").replaceWith((function(){const t=s()(this)
+if(!t.data("uc_snippet")||!t.data("uc_sig"))return this
+const e=r.a.uniqueId("uc_")
+let n="/object_snippet"
+ENV.files_domain&&(n=`//${ENV.files_domain}${n}`)
+const i=s()(`<form\n            action='${Object(o["a"])(n)}'\n            method='post'\n            class='user_content_post_form'\n            target='${Object(o["a"])(e)}'\n            id='form-${Object(o["a"])(e)}'\n          />`)
+i.append(s()("<input type='hidden'/>").attr({name:"object_data",value:t.data("uc_snippet")}))
+i.append(s()("<input type='hidden'/>").attr({name:"s",value:t.data("uc_sig")}))
+s()("body").append(i)
+setTimeout(()=>i.submit(),0)
+return s()(`<iframe\n            class='user_content_iframe'\n            name='${Object(o["a"])(e)}'\n            style='width: ${Object(o["a"])(t.data("uc_width"))}; height: ${Object(o["a"])(t.data("uc_height"))};'\n            frameborder='0'\n            title='${Object(o["a"])(c.t("User Content"))}'\n          />`)}))
+n.find("img.equation_image").each((t,e)=>{const n=s()(e)
+const i=d.translateMathmlForScreenreaders(n)
+n.removeAttr("x-canvaslms-safe-mathml")
+n.after(i)})}return n.html()}}
+e["a"]=d},"xxD+":function(t,e,n){"use strict"
+var i=n("B77g")
+var s=function(t,e){return function(){return t.apply(e,arguments)}},a=function(t,e){for(var n in e)r.call(e,n)&&(t[n]=e[n])
+function i(){this.constructor=t}i.prototype=e.prototype
+t.prototype=new i
+t.__super__=e.prototype
+return t},r={}.hasOwnProperty
+e["a"]=function(t){a(e,t)
+function e(){this.onInput=s(this.onInput,this)
+return e.__super__.constructor.apply(this,arguments)}e.prototype.events={keyup:"keyup",change:"change"}
+e.prototype.defaults={onInputDelay:200,modelAttribute:"filter",minLength:3,allowSmallerNumbers:true}
+e.prototype.onInput=function(){if(this.el.value!==this.lastValue){this.updateModel()
+this.trigger("input",this.el.value)}return this.lastValue=this.el.value}
+e.prototype.onEnter=function(){this.el.select()
+return this.trigger("enter",this.el.value)}
+e.prototype.keyup=function(t){clearTimeout(this.onInputTimer)
+this.onInputTimer=setTimeout(this.onInput,this.options.onInputDelay)
+null!=t.which&&13===t.which&&this.onEnter()
+return null}
+e.prototype.change=e.prototype.keyup
+return e}(i["a"])}}])
+
+//# sourceMappingURL=102-c-1883f88e5f.js.map

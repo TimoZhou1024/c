@@ -1,1 +1,1 @@
-p=p->next;
+    // return x >> n;

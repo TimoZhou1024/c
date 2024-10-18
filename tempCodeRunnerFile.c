@@ -1,1 +1,1 @@
-(s+i)->name
+    int *p = &x;
